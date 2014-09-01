@@ -16,7 +16,15 @@ namespace LicenseManager
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            if (Properties.Settings.Default.FirstStart)
+            {
+                Application.Run(new FirstStart());
+            }
+            else
+            {
+                Application.Run(new Manager());
+            }
+            
         }
     }
 }

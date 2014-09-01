@@ -1,1 +1,7 @@
 C:\Users\sigmundd\Documents\GitHub\LicenseManager\LicenseManager\bin\Debug\LicenseManager.exe.config
+C:\Users\sigmundd\Documents\GitHub\LicenseManager\LicenseManager\obj\Debug\LicenseManager.csprojResolveAssemblyReference.cache
+C:\Users\sigmundd\Documents\GitHub\LicenseManager\LicenseManager\obj\Debug\LicenseManager.CreateLicense.resources
+C:\Users\sigmundd\Documents\GitHub\LicenseManager\LicenseManager\obj\Debug\LicenseManager.FirstStart.resources
+C:\Users\sigmundd\Documents\GitHub\LicenseManager\LicenseManager\obj\Debug\LicenseManager.Manager.resources
+C:\Users\sigmundd\Documents\GitHub\LicenseManager\LicenseManager\obj\Debug\LicenseManager.Properties.Resources.resources
+C:\Users\sigmundd\Documents\GitHub\LicenseManager\LicenseManager\obj\Debug\LicenseManager.csproj.GenerateResource.Cache
