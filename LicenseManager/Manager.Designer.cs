@@ -28,32 +28,39 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.gridview = new System.Windows.Forms.DataGridView();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.cb_filter_application = new System.Windows.Forms.ComboBox();
             this.cb_filter_user = new System.Windows.Forms.ComboBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.btn_create = new System.Windows.Forms.Button();
             this.btn_copy_text = new System.Windows.Forms.Button();
+            this.gridview = new System.Windows.Forms.DataGridView();
+            this.btn_open_folder = new System.Windows.Forms.Button();
+            this.btn_upload = new System.Windows.Forms.Button();
+            this.contextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.copyDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.checkLicenseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridview)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridview)).BeginInit();
+            this.contextMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -72,22 +79,6 @@
             this.splitContainer1.Size = new System.Drawing.Size(949, 458);
             this.splitContainer1.SplitterDistance = 281;
             this.splitContainer1.TabIndex = 0;
-            // 
-            // gridview
-            // 
-            this.gridview.AllowUserToAddRows = false;
-            this.gridview.AllowUserToDeleteRows = false;
-            this.gridview.AllowUserToOrderColumns = true;
-            this.gridview.AllowUserToResizeRows = false;
-            this.gridview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridview.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridview.Location = new System.Drawing.Point(0, 0);
-            this.gridview.MultiSelect = false;
-            this.gridview.Name = "gridview";
-            this.gridview.ReadOnly = true;
-            this.gridview.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridview.Size = new System.Drawing.Size(664, 458);
-            this.gridview.TabIndex = 0;
             // 
             // splitContainer2
             // 
@@ -118,17 +109,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Filter";
             // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.tableLayoutPanel2);
-            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox2.Location = new System.Drawing.Point(0, 0);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(281, 225);
-            this.groupBox2.TabIndex = 0;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Controls";
-            // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 2;
@@ -146,22 +126,6 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(275, 210);
             this.tableLayoutPanel1.TabIndex = 0;
-            // 
-            // tableLayoutPanel2
-            // 
-            this.tableLayoutPanel2.ColumnCount = 2;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Controls.Add(this.btn_create, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.btn_copy_text, 1, 0);
-            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 16);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 2;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(275, 206);
-            this.tableLayoutPanel2.TabIndex = 0;
             // 
             // label1
             // 
@@ -201,6 +165,35 @@
             this.cb_filter_user.TabIndex = 3;
             this.cb_filter_user.SelectedIndexChanged += new System.EventHandler(this.cb_filter_user_SelectedIndexChanged);
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.tableLayoutPanel2);
+            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox2.Location = new System.Drawing.Point(0, 0);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(281, 225);
+            this.groupBox2.TabIndex = 0;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Controls";
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 2;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Controls.Add(this.btn_create, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.btn_copy_text, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.btn_open_folder, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.btn_upload, 0, 1);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 16);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 2;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(275, 206);
+            this.tableLayoutPanel2.TabIndex = 0;
+            // 
             // btn_create
             // 
             this.btn_create.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -219,9 +212,71 @@
             this.btn_copy_text.Name = "btn_copy_text";
             this.btn_copy_text.Size = new System.Drawing.Size(132, 97);
             this.btn_copy_text.TabIndex = 1;
-            this.btn_copy_text.Text = "Copy Data to Clipboard";
+            this.btn_copy_text.Text = "Copy Selected Data to Clipboard";
             this.btn_copy_text.UseVisualStyleBackColor = true;
             this.btn_copy_text.Click += new System.EventHandler(this.btn_copy_text_Click);
+            // 
+            // gridview
+            // 
+            this.gridview.AllowUserToAddRows = false;
+            this.gridview.AllowUserToDeleteRows = false;
+            this.gridview.AllowUserToOrderColumns = true;
+            this.gridview.AllowUserToResizeRows = false;
+            this.gridview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridview.ContextMenuStrip = this.contextMenuStrip;
+            this.gridview.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridview.Location = new System.Drawing.Point(0, 0);
+            this.gridview.MultiSelect = false;
+            this.gridview.Name = "gridview";
+            this.gridview.ReadOnly = true;
+            this.gridview.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.gridview.Size = new System.Drawing.Size(664, 458);
+            this.gridview.TabIndex = 0;
+            // 
+            // btn_open_folder
+            // 
+            this.btn_open_folder.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_open_folder.Location = new System.Drawing.Point(140, 106);
+            this.btn_open_folder.Name = "btn_open_folder";
+            this.btn_open_folder.Size = new System.Drawing.Size(132, 97);
+            this.btn_open_folder.TabIndex = 2;
+            this.btn_open_folder.Text = "Open Key Folder";
+            this.btn_open_folder.UseVisualStyleBackColor = true;
+            this.btn_open_folder.Click += new System.EventHandler(this.btn_open_folder_Click);
+            // 
+            // btn_upload
+            // 
+            this.btn_upload.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_upload.Location = new System.Drawing.Point(3, 106);
+            this.btn_upload.Name = "btn_upload";
+            this.btn_upload.Size = new System.Drawing.Size(131, 97);
+            this.btn_upload.TabIndex = 3;
+            this.btn_upload.Text = "Upload Public Key";
+            this.btn_upload.UseVisualStyleBackColor = true;
+            this.btn_upload.Click += new System.EventHandler(this.btn_upload_Click);
+            // 
+            // contextMenuStrip
+            // 
+            this.contextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.copyDataToolStripMenuItem,
+            this.checkLicenseToolStripMenuItem});
+            this.contextMenuStrip.Name = "contextMenuStrip";
+            this.contextMenuStrip.Size = new System.Drawing.Size(150, 48);
+            this.contextMenuStrip.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip_Opening);
+            // 
+            // copyDataToolStripMenuItem
+            // 
+            this.copyDataToolStripMenuItem.Name = "copyDataToolStripMenuItem";
+            this.copyDataToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.copyDataToolStripMenuItem.Text = "Copy Data";
+            this.copyDataToolStripMenuItem.Click += new System.EventHandler(this.copyDataToolStripMenuItem_Click);
+            // 
+            // checkLicenseToolStripMenuItem
+            // 
+            this.checkLicenseToolStripMenuItem.Name = "checkLicenseToolStripMenuItem";
+            this.checkLicenseToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.checkLicenseToolStripMenuItem.Text = "Check License";
+            this.checkLicenseToolStripMenuItem.Click += new System.EventHandler(this.checkLicenseToolStripMenuItem_Click);
             // 
             // Manager
             // 
@@ -235,16 +290,17 @@
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridview)).EndInit();
             this.splitContainer2.Panel1.ResumeLayout(false);
             this.splitContainer2.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridview)).EndInit();
+            this.contextMenuStrip.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -264,6 +320,11 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Button btn_create;
         private System.Windows.Forms.Button btn_copy_text;
+        private System.Windows.Forms.Button btn_open_folder;
+        private System.Windows.Forms.Button btn_upload;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip;
+        private System.Windows.Forms.ToolStripMenuItem copyDataToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem checkLicenseToolStripMenuItem;
     }
 }
 

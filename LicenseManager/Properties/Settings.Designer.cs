@@ -46,5 +46,65 @@ namespace LicenseManager.Properties {
                 this["Path"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string FTP_Server {
+            get {
+                return ((string)(this["FTP_Server"]));
+            }
+            set {
+                this["FTP_Server"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string FTP_User {
+            get {
+                return ((string)(this["FTP_User"]));
+            }
+            set {
+                this["FTP_User"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string FTP_Password {
+            get {
+                return ((string)(this["FTP_Password"]));
+            }
+            set {
+                this["FTP_Password"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string PublicKey {
+            get {
+                return ((string)(this["PublicKey"]));
+            }
+            set {
+                this["PublicKey"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string PrivateKey {
+            get {
+                return ((string)(this["PrivateKey"]));
+            }
+            set {
+                this["PrivateKey"] = value;
+            }
+        }
     }
 }

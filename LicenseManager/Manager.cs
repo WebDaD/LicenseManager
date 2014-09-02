@@ -36,5 +36,30 @@ namespace LicenseManager
         {
 
         }
+
+        private void btn_upload_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_open_folder_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void contextMenuStrip_Opening(object sender, CancelEventArgs e)
+        {
+
+        }
+
+        private void copyDataToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkLicenseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
